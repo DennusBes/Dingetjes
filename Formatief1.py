@@ -44,6 +44,7 @@ def zoekdeverschillen():
             return print(f'Er vind een verschil plaats op index {len(kortste_text)}.')
 
 #          OPDRACHT 3
+#  count
 def count(lst, getal):
     count=0
     for i in lst:
@@ -51,8 +52,22 @@ def count(lst, getal):
             count += 1
     return count
 lijstje= [1,1,1,1,1,3,4,5,6,7,8,8,9]
-print(count(lijstje, 8 ))
+#print(count(lijstje, 8 ))
 
+#  verschill
+def verschillen(lst):
+    diff = 0
+    for i in range(0,len(lst)-1):
+
+        if lst[i+1]-lst[i] > diff:
+            diff = lst[i+1]-lst[i]
+    return diff
+#print(verschillen([1,2,8,3,900000000000,5,33,44,55,666]))
+
+#  0 en 1 checker
+def listchecker(lst):
+    return count(lst,1) > count(lst,0) and count(lst,0) <= 12
+#print(listchecker([1,1,1,1,1,1,1,0,0,0,0,0,0]))
 
 
 #          OPDRACHT 4
@@ -60,5 +75,5 @@ def paling(woord):
     return woord == woord[::-1]
 
 #          OPDRACHT 10
-#def fib(n,v0=0, v1=1):
-#    return fib_3(n-1 ,v1 v0+v1) if n>1 else (v0, v1) [n]
+def fib(n,v0=0, v1=1):
+    return fib_3(n-1 ,v1 v0+v1) if n>1 else (v0, v1) [n]
