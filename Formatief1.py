@@ -74,6 +74,50 @@ def listchecker(lst):
 def paling(woord):
     return woord == woord[::-1]
 
+#          OPDRACHT 5
+def sorting(lst):
+    data = lst
+    if len(data) > 1:
+
+        middel = len(data)//2
+        Left = data[:middel]
+        Right = data[middel:]
+
+        mergeSort(Left, sort_value)
+        mergeSort(Right, sort_value)
+
+        z = x = c = 0
+
+        while z < len(Left) and x < len(Right):
+            if Left[z].get(sort_value) < Right[x].get(sort_value):
+                data[c] = Left[z]
+                z += 1
+            elif Left[z].get(sort_value) == Right[x].get(sort_value):
+                if Left[z].get("name") < Right[x].get("name"):
+                    data[c] = Left[z]
+                    z += 1
+                else:
+                    data[c] = Right[x]
+                    x += 1
+            else:
+                data[c] = Right[x]
+                x += 1
+            c += 1
+
+        while z < len(Left):
+            data[c] = Left[z]
+            z += 1
+            c += 1
+
+        while x < len(Right):
+            data[c] = Right[x]
+            x += 1
+            c += 1
+    return data
+
+#          OPDRACHT 6
+
+
 #          OPDRACHT 10
-def fib(n,v0=0, v1=1):
-    return fib_3(n-1 ,v1 v0+v1) if n>1 else (v0, v1) [n]
+#def fib(n,v0=0, v1=1):
+#    return fib_3(n-1 ,v1 v0+v1) if n>1 else (v0, v1) [n]
