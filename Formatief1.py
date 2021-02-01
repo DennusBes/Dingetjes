@@ -26,10 +26,16 @@ def zoekdeverschillen():
     text2 = (input("Voer text 2 in: "))
     if (len(text1)) > (len(text1)):
         kortste_text = text2
+        langste_text = text1
     else:
         kortste_text = text1
+        langste_text = text2
     for i in range(len(kortste_text)):
-        if text1[i]!=text2[i]:
-            print(f'Er vind een verschil plaats op index {i}.')
+        if kortste_text[i]!=langste_text[i]:
+            return print(f'Er vind een verschil plaats op index {i}.')
+        else:
+            return print(f'Er vind een verschil plaats op index {len(kortste_text)}.')
 
-zoekdeverschillen()
+#          OPDRACHT 3
+def count():
+    
