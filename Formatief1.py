@@ -141,9 +141,12 @@ def compressie():
     sourcepath="C:\\Users\\Dennis\\Documents\\TESTFOLDER\\origineel.txt"
     destpath="C:\\Users\\Dennis\\Documents\\TESTFOLDER\\kopietje.txt"
     shutil.copy2(sourcepath,destpath)
-    fin = open(destpath, "rt")
-    for line in fin:
-        fout.write(line.replace(' ', ''))
+    
+    file1=open(destpath, 'r')
+    lines  = file1.readlines()
+    for line in lines:
+        line.lstrip()
+
 compressie()
 #          OPDRACHT 10
 #def fib(n,v0=0, v1=1):
