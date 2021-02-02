@@ -116,6 +116,13 @@ def sorting(lst):
     return data
 
 #          OPDRACHT 6
+def gemiddelde(lst):
+    tot = 0
+    for i in lst:
+        tot = tot+i
+    gem=tot / len(lst)
+    return gem
+
 
 
 #          OPDRACHT 10
