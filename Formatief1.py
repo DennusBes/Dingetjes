@@ -1,3 +1,4 @@
+import random
 #          OPDRACHT 1
 
 # FOR LOOPS
@@ -123,8 +124,18 @@ def gemiddelde(lst):
     gem=tot / len(lst)
     return gem
 
-
-
+#           OPDRACHT 7
+# Maakt gebruik van  'from random import randrang '
+def gokken():
+    goal = random.randint(0,10)
+    while True:
+        gok = int(input("Gok een getal tussen de 0 en 10. "))
+        if gok == goal:
+            print('Goed gegokt, gz!')
+            break
+        else:
+            print('jammer weer, nog een keer!')
+gokken()
 #          OPDRACHT 10
 #def fib(n,v0=0, v1=1):
 #    return fib_3(n-1 ,v1 v0+v1) if n>1 else (v0, v1) [n]
