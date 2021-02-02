@@ -1,4 +1,5 @@
 import random
+import shutil
 #          OPDRACHT 1
 
 # FOR LOOPS
@@ -125,7 +126,6 @@ def gemiddelde(lst):
     return gem
 
 #           OPDRACHT 7
-# Maakt gebruik van  'from random import randrang '
 def gokken():
     goal = random.randint(0,10)
     while True:
@@ -135,7 +135,16 @@ def gokken():
             break
         else:
             print('jammer weer, nog een keer!')
-gokken()
+
+#           OPDRACHT 8
+def compressie():
+    sourcepath="C:\\Users\\Dennis\\Documents\\TESTFOLDER\\origineel.txt"
+    destpath="C:\\Users\\Dennis\\Documents\\TESTFOLDER\\kopietje.txt"
+    shutil.copy2(sourcepath,destpath)
+    fin = open(destpath, "rt")
+    for line in fin:
+        fout.write(line.replace(' ', ''))
+compressie()
 #          OPDRACHT 10
 #def fib(n,v0=0, v1=1):
 #    return fib_3(n-1 ,v1 v0+v1) if n>1 else (v0, v1) [n]
